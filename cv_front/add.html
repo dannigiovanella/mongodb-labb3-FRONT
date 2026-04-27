@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lägg till</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>CV</h1>
+        <nav>
+            <!--Navigationsmeny-->
+            <a href="index.html">Hem</a>
+            <a href="add.html">Lägg till</a>
+            <a href="about.html">Om</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="pagelayout">
+            <h2>Lägg till arbetslivserfarenhet</h2>
+
+            <!--Formulär för att lägga till arbetserfarenhet-->
+            <form id="workform">
+
+                <!--Jobbtitel-->
+                <!--Felmeddelande för jobbtitel-->
+                <span class="error" id="jobtitle-error"></span>
+                <label for="jobtitle">Roll:</label>
+                <input type="text" id="jobtitle" name="jobtitle">
+
+
+                <!--Företagsnamn-->
+                <!--Felmeddelande för företagsnamn-->
+                <span class="error" id="companyname-error"></span>
+                <label for="companyname">Företag:</label>
+                <input type="text" id="companyname" name="companyname">
+
+
+
+                <!--Plats-->
+                <!--felmeddelande för plats-->
+                <span class="error" id="location-error"></span>
+                <label for="location">Plats:</label>
+                <input type="text" id="location" name="location">
+
+
+                <!--Startdatum-->
+                <!--Felmeddelande för startdatum-->
+                <span class="error" id="startdate-error"></span>
+                <label for="startdate">Startdatum:</label>
+                <input type="date" id="startdate" name="startdate">
+                <!--Felmeddelande för startdatum-->
+
+
+                <!--Slutdatum-->
+                <!--Felmeddelande för slutdatum-->
+                <span class="error" id="enddate-error"></span>
+                <label for="enddate">Slutdatum:</label>
+                <input type="date" id="enddate" name="enddate">
+
+
+                <!--Jobbbeskrivning-->
+                <!--Felmeddelande för jobb-beskrivning-->
+                <span class="error" id="description-error"></span>
+                <label for="description">Beskrivning:</label>
+                <textarea id="description" name="description"></textarea>
+
+
+                <!--Knapp för att lägga till-->
+                <button type="submit">Lägg till</button>
+
+            </form>
+
+        </section>
+
+    </main>
+        <footer>
+        <p><strong>Sida skapad av:</strong></p>
+        <p>Daniela Giovanella<br>
+            dagi2500@student.miun.se
+        </p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

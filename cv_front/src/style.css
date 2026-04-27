@@ -1,0 +1,197 @@
+/*GENERELLT FÖR ALLA SIDOR*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: rgb(19, 15, 15);
+}
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+    color: rgb(17, 16, 16);
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Positionering för element i header*/
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: rgb(238, 230, 230);
+}
+
+/*Navigerringsmeny*/
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/*Styling för länkar i navmeny*/
+nav a {
+    text-decoration: none;
+    color: rgb(238, 230, 230);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: rgb(182, 141, 141);
+}
+
+main {
+    background-color: rgb(221, 188, 188);
+    border-radius: 10px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+h3{
+    margin-bottom: 0.5rem;
+}
+
+/*Felmeddelande*/
+.error {
+    color: rgb(212, 8, 8);
+    font-weight: 600;
+}
+
+/*Layout för innehåll på samtliga sidor*/
+.pagelayout {
+    background-color: rgb(247, 231, 231);
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer{
+  color: rgb(238, 230, 230);
+  margin-top: 2rem; 
+  margin-bottom: 2rem; 
+  padding-left: 1rem;
+}
+
+/*INDEX SIDA*/
+/*Styling för kort till varje post om arbetslivseerfarenhet*/
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: rgb(243, 242, 242);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+/*Wrapper för att kunna kontrollera placering av knapp*/
+.button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+}
+
+/*Styling av knapp*/
+.button-wrapper button {
+    width: 15rem;
+    height: 2rem;
+    padding: 0.2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: rgb(97, 55, 55);
+    color: rgb(238, 230, 230);
+    font-weight: 600;
+
+}
+
+.button-wrapper button:hover {
+    background-color: rgb(17, 16, 16);
+}
+
+
+/*LÄGG TILL SIDA*/
+/*Layout för formulär*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+/*Styling inputfälten*/
+input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/*Styling för knapp i formulär*/
+form button {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.2rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: rgb(97, 55, 55);
+    color: rgb(238, 230, 230);
+    font-weight: 600;
+}
+
+form button:hover {
+    background-color: rgb(17, 16, 16);
+}
+
+/*OM SIDA*/
+
+article{
+    max-width: 65ch;
+}
+
+article p{
+    margin-bottom: 1rem;
+}
+
+article ul{
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+/*ANPASSNING FÖR MINDRE SKÄRM*/
+@media (max-width: 700px) {
+
+    .pagelayout{
+        width: 100%;
+        margin: 0;
+    }
+
+    .button-wrapper button{
+        width: 100%;
+    }
+}

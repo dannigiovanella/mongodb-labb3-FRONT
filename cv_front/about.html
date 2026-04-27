@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Om</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>CV</h1>
+        <!--Navigationsmeny-->
+        <nav>
+            <a href="index.html">Hem</a>
+            <a href="add.html">Lägg till</a>
+            <a href="about.html">Om</a>
+        </nav>
+    </header>
+
+    <main>
+        <!--Sektion som beskriver arbetet med sidan-->
+        <article class="pagelayout">
+            <h2>Om webbplatsen</h2>
+            <p>
+                Detta är en webbapplikation som används för att hantera arbetslivserfarenheter. Projektet består av ett
+                REST API i backend och ett frontend-gränssnitt som kommunicerar med API. Syftet med projektet är att
+                visa hur CRUD-operationer fungerar i praktiken och hur data kan skickas
+                mellan frontend och backend.
+            </p>
+
+            <h3>Databas och server</h3>
+            <p>
+                Applikationen använder en PostgreSQL-databas. Databasen är kopplad till
+                ett Node.js/Express-API som hanterar all kommunikation mellan frontend och databasen inklusive
+                CRUD-operationer. API är deployat via Render där även databasanslutningen är konfigurerad genom
+                miljövariabler.
+            </p>
+
+            <h3>Funktionalitet</h3>
+            <p>
+                Applikationen gör det möjligt att:
+            </p>
+            <ul>
+                <li>Lägga till nya arbetslivserfarenheter</li>
+                <li>Visa sparade poster från databasen</li>
+                <li>Ta bort poster direkt i gränssnittet</li>
+            </ul>
+
+            <p>Validering av inmatning av data i formulär styrs med tydliga felmeddelande för varje fält för att inte
+                lagra tomma värden.</p>
+
+            <h3>Slutsats</h3>
+            <p>
+                Under arbetet har jag fått en bättre förståelse för hur ett REST API är uppbyggt och hur frontend och
+                backend kommunicerar med varandra.
+
+                Jag har lärt mig hur CRUD-operationer fungerar i praktiken, särskilt hur data kan skapas och hämtas från
+                en databas via API-anrop.
+            </p>
+            <p>
+                Uppdateringsfunktionen var den del som var svårast att få att fungera, eftersom den kräver att
+                rätt ID sparas och att samma formulär används både för att skapa och uppdatera data. Jag lyckades inte
+                få den delen att fungera helt i gränssnittet. Dock är det skapat en route för uppdatering av post (PUT)
+                i backend.
+            </p>
+            <p>Arbetet med att få till en uppdateringsfunktion har fått mig att förstå hur viktigt det är viktigt att
+                vara noggrann med hur data skickas mellan frontend och backend särskilt när samma formulär används för
+                flera olika saker. Små fel gör att hela funktionen kan
+                sluta fungera.</p>
+            <p>Jag har också förstått att det är viktigt att dela upp koden i tydliga funktioner, eftersom det gör det
+                enklare att förstå vad som händer och att hitta fel.</p>
+        </article>
+    </main>
+        <footer>
+        <p><strong>Sida skapad av:</strong></p>
+        <p>Daniela Giovanella<br>
+            dagi2500@student.miun.se
+        </p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

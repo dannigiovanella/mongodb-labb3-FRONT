@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CV</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>CV</h1>
+        <!--Navigationsmeny-->
+        <nav>
+            <a href="index.html">Hem</a>
+            <a href="add.html">Lägg till</a>
+            <a href="about.html">Om</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <!--Sektion där poster om arbetslivserfarenget genereras dynamiskt med js-->
+        <section class="pagelayout">
+
+            <h2>Arbetslivserfarenhet</h2>
+
+            <!--Container för tillagda poster av arbetslivserfarenhet-->
+            <div id="workexperience-list"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p><strong>Sida skapad av:</strong></p>
+        <p>Daniela Giovanella<br>
+            dagi2500@student.miun.se
+        </p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
