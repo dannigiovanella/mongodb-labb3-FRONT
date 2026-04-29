@@ -31,12 +31,18 @@
                 mellan frontend och backend.
             </p>
 
-            <h3>Databas och server</h3>
+            <h3>Databas och server (uppdaterad)</h3>
             <p>
-                Applikationen använder en PostgreSQL-databas. Databasen är kopplad till
-                ett Node.js/Express-API som hanterar all kommunikation mellan frontend och databasen inklusive
-                CRUD-operationer. API är deployat via Render där även databasanslutningen är konfigurerad genom
-                miljövariabler.
+                Applikationen använder MongoDB Atlas som databas istället för en relationsdatabas. Databasen är kopplad
+                till ett Node.js/Express-API som hanterar all kommunikation mellan frontend och databasen inklusive
+                CRUD-operationer.
+            </p>
+
+            <p>
+                I stället för tabeller används schema och dokument med Mongoose där struktur och validering
+                av data hanteras direkt i backend, även om validering även hanteras på frontend sidan. API:t är
+                deployat via Render där även databasanslutningen
+                konfigureras med hjälp av miljövariabler från .env.
             </p>
 
             <h3>Funktionalitet</h3>
@@ -52,29 +58,34 @@
             <p>Validering av inmatning av data i formulär styrs med tydliga felmeddelande för varje fält för att inte
                 lagra tomma värden.</p>
 
-            <h3>Slutsats</h3>
+            <h3>Slutsats (uppdaterad)</h3>
+            <p>Under arbetet har jag fått en bättre förståelse för hur ett REST API fungerar tillsammans med en
+                NoSQL-databas. Jag har lärt mig hur CRUD-operationer kan implementeras med MongoDB och hur Mongoose
+                används för att strukturera och validera data.
+            </p>
             <p>
-                Under arbetet har jag fått en bättre förståelse för hur ett REST API är uppbyggt och hur frontend och
-                backend kommunicerar med varandra.
+                En tydlig skillnad jämfört med att arbeta med SQL är att MongoDB och Mongoose upplevs mer flexibelt och
+                enklare att arbeta med, särskilt genom användningen av scheman och färdiga metoder som create,
+                findByIdAndUpdate och findByIdAndDelete. Personligen upplever jag det som att det blir mindre och mer
+                strukturerad kod vilket gör den mer lättarbetad.
+            </p>
+            <p>Då mitt arbetssätt varit att uppdatera ett befintligt projekt skapad med SQL och anppassa detta till
+                NOSQL och MongoDB så har det varit klurigt men viktigt att förstå vad som behövs justeras i både BACK
+                och FRONT för att data ska kunna skickas korrekt. Smådetaljer som skillnad på exempelvis hur id används
+                i båda delar är lätt att missa om kommunikationstänket inte finns med från början. </p>
 
-                Jag har lärt mig hur CRUD-operationer fungerar i praktiken, särskilt hur data kan skapas och hämtas från
-                en databas via API-anrop.
-            </p>
             <p>
-                Uppdateringsfunktionen var den del som var svårast att få att fungera, eftersom den kräver att
-                rätt ID sparas och att samma formulär används både för att skapa och uppdatera data. Jag lyckades inte
-                få den delen att fungera helt i gränssnittet. Dock är det skapat en route för uppdatering av post (PUT)
-                i backend.
+                Arbetet har också lärt mig att nekad åtkomst till databasen inte nödvändigtvis behöver ligga i
+                felaktigheter i koden utan hur MongoDB i det här fallet jobbar med vem som kan ha åtkomst, och att det
+                kan varta bra att kolla inställningar nogrannare på databassidan innan man börjar testa att felsöka i
+                koden.
             </p>
-            <p>Arbetet med att få till en uppdateringsfunktion har fått mig att förstå hur viktigt det är viktigt att
-                vara noggrann med hur data skickas mellan frontend och backend särskilt när samma formulär används för
-                flera olika saker. Små fel gör att hela funktionen kan
-                sluta fungera.</p>
-            <p>Jag har också förstått att det är viktigt att dela upp koden i tydliga funktioner, eftersom det gör det
-                enklare att förstå vad som händer och att hitta fel.</p>
+
+            <p>Det exempel felsökning är bara ett av alla som hjälpt mig förstå hur viktigt att strukturera koden
+                tydligt för att kunna identifiera problem vid felsökning.</p>
         </article>
     </main>
-        <footer>
+    <footer>
         <p><strong>Sida skapad av:</strong></p>
         <p>Daniela Giovanella<br>
             dagi2500@student.miun.se

@@ -18,7 +18,7 @@ function validateForm() {
     document.getElementById("description-error").textContent = "";
 
 
-    //Variabel för om fält är tomt eller ej. Sätts till false om nåt är fel
+    // Variabel för om fält är tomt eller ej. Sätts till false om nåt är fel
     let isCorrect = true;
 
     //Hämtar id och dess värde för inputfält. trim tar bort onödiga mellanslag
@@ -29,41 +29,41 @@ function validateForm() {
     const enddate = document.getElementById("enddate").value;
     const description = document.getElementById("description").value.trim();
 
-    //Kontroll för skriva ut felmeddelande om fälten är tomma.
-    //Individuella felmedellanden för varje fält
+    // Kontroll för skriva ut felmeddelande om fälten är tomma.
+    // Individuella felmedellanden för varje fält
 
-    //Jobbtitel
+    // Jobbtitel
     if (!jobtitle) {
         document.getElementById("jobtitle-error").textContent = "Fyll i roll";
         isCorrect = false;
     }
-    //Företagsnamn
+    // Företagsnamn
     if (!companyname) {
         document.getElementById("companyname-error").textContent = "Fyll i företag";
         isCorrect = false;
     }
-    //Plats
+    // Plats
     if (!location) {
         document.getElementById("location-error").textContent = "Fyll i plats";
         isCorrect = false;
     }
-    //Startdatum
+    // Startdatum
     if (!startdate) {
         document.getElementById("startdate-error").textContent = "Fyll i startdatum";
         isCorrect = false;
     }
-    //Slutdatum
+    // Slutdatum
     if (!enddate) {
         document.getElementById("enddate-error").textContent = "Fyll i slutdatum";
         isCorrect = false;
     }
-    //Beskrivning
+    // Beskrivning
     if (!description) {
         document.getElementById("description-error").textContent = "Fyll i beskrivning";
         isCorrect = false;
     }
 
-    //Returnerar resultatet av valideringen
+    // Returnerar resultatet av valideringen
     return isCorrect;
 }
 
@@ -225,7 +225,7 @@ async function showWorkexperience(data) {
         // Eventlyssnare som anpropar delete-funktion vid klick
         //Plockar ut post via ID
         deleteButton.addEventListener("click", () => {
-            deleteWorkPost(workPost.id);
+            deleteWorkPost(workPost._id);
         });
 
         //Lägger knapp i wrapper
