@@ -1,7 +1,7 @@
 "use strict";
 
 //Hämtar API URL. Används i alla requests 
-const API_URL = "https://backend-labb2-back.onrender.com/workexperience";
+const API_URL = "hhttps://mongodb-labb3-back.onrender.com/workexperience";
 
 
 // VALIDERING
@@ -266,7 +266,3 @@ async function deleteWorkPost(id) {
     }
 
 }
-
-
-
-// GLÖM EJ VALIDERING
