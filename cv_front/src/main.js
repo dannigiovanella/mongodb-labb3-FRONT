@@ -1,13 +1,22 @@
 "use strict";
 
 //Hämtar API URL. Används i alla requests 
-const API_URL = "hhttps://mongodb-labb3-back.onrender.com/workexperience";
+const API_URL = "https://mongodb-labb3-back.onrender.com/workexperience";
 
 
 // VALIDERING
 
 //Funktion validerar formulär-inupt och skapar felmeddelande
 function validateForm() {
+
+    // Rensar gamla felmeddelanden innan ny validering
+    document.getElementById("jobtitle-error").textContent = "";
+    document.getElementById("companyname-error").textContent = "";
+    document.getElementById("location-error").textContent = "";
+    document.getElementById("startdate-error").textContent = "";
+    document.getElementById("enddate-error").textContent = "";
+    document.getElementById("description-error").textContent = "";
+
 
     //Variabel för om fält är tomt eller ej. Sätts till false om nåt är fel
     let isCorrect = true;
